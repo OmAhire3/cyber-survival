@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Dodge | Cyber Survival</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Dodge home">
+        <span class="brand-icon">N</span>
+        <span>NEON<span class="muted">DODGE</span></span>
+      </a>
+      <div class="status-pill"><span class="live-dot"></span> ARCADE MODE</div>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">CYBER SURVIVAL // 001</p>
+      <h1>Stay alive.<br><span>Own the grid.</span></h1>
+      <p class="subtitle">Dodge the red hazards. Collect cyan energy. How long can you survive?</p>
+    </section>
+
+    <section class="stats" aria-label="Game statistics">
+      <div class="stat">
+        <span class="stat-label">SCORE</span>
+        <strong id="score">00000</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">BEST</span>
+        <strong id="best">00000</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">LEVEL</span>
+        <strong id="level">01</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">ENERGY</span>
+        <strong id="lives">♥ ♥ ♥</strong>
+      </div>
+    </section>
+
+    <section class="arena">
+      <canvas id="gameCanvas" aria-label="Neon Dodge game area"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="orb-logo">✦</div>
+          <p class="eyebrow" id="overlayEyebrow">SYSTEM READY</p>
+          <h2 id="overlayTitle">Ready to<br><span>survive?</span></h2>
+          <p id="overlayText">Move fast. Think faster. Don't touch the red.</p>
+          <button id="startBtn">START GAME <span>→</span></button>
+          <p class="hint" id="overlayHint">PRESS ENTER TO BEGIN</p>
+        </div>
+      </div>
+
+      <div class="pause-indicator hidden" id="pauseIndicator">Ⅱ PAUSED</div>
+      <div class="arena-bottom">
+        <span><i class="cyan-dot"></i> PLAYER</span>
+        <span><i class="red-dot"></i> HAZARD</span>
+        <span><i class="yellow-dot"></i> ENERGY</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="control-info">
+        <div class="key-group">
+          <span class="key">←</span><span class="key">↑</span>
+          <span class="key">↓</span><span class="key">→</span>
+        </div>
+        <div>
+          <strong>MOVE</strong>
+          <p>Arrow keys or WASD</p>
+        </div>
+      </div>
+      <div class="control-info">
+        <span class="key key-wide">SPACE</span>
+        <div>
+          <strong>PAUSE</strong>
+          <p>Take a breather</p>
+        </div>
+      </div>
+      <div class="control-info">
+        <span class="key key-wide">SHIFT</span>
+        <div>
+          <strong>BOOST</strong>
+          <p>Quick dash</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="mobile-controls">
+      <button class="touch-btn" data-dir="up" aria-label="Move up">↑</button>
+      <div class="touch-row">
+        <button class="touch-btn" data-dir="left" aria-label="Move left">←</button>
+        <button class="touch-btn" data-dir="down" aria-label="Move down">↓</button>
+        <button class="touch-btn" data-dir="right" aria-label="Move right">→</button>
+      </div>
+    </div>
+
+    <footer>
+      <span>NEON DODGE <span class="muted">© 2026</span></span>
+      <span>BUILT TO SURVIVE <span class="cyan">✦</span></span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
